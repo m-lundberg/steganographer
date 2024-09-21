@@ -1,0 +1,53 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "debug",
+            "hidden": false,
+            "description": "Debug build",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/debug",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": true
+            }
+        },
+        {
+            "name": "release",
+            "hidden": false,
+            "description": "Release build",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/release",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": true
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "debug",
+            "description": "Debug build",
+            "configurePreset": "debug"
+        },
+        {
+            "name": "release",
+            "description": "Release build",
+            "configurePreset": "release"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "release",
+            "description": "Run tests with release build",
+            "configurePreset": "release"
+        },
+        {
+            "name": "debug",
+            "description": "Run tests with debug build",
+            "configurePreset": "debug"
+        }
+    ]
+}
