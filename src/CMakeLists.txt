@@ -2,7 +2,9 @@
 add_executable(steganographer
     "main.cpp"
 
+    "include/compression.hpp"
     "include/image.hpp"
+    "include/int_types.hpp"
     "include/steganography.hpp"
 )
 

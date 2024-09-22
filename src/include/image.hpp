@@ -1,6 +1,8 @@
 #ifndef STEGANOGRAPHER_IMAGE_HPP
 #define STEGANOGRAPHER_IMAGE_HPP
 
+#include "int_types.hpp"
+
 #include <algorithm>
 #include <cstdint>
 #include <expected>
@@ -16,10 +18,6 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #define STBIW_WINDOWS_UTF8
 #include <stb_image_write.h>
-
-
-using u8 = uint8_t;
-using i32 = int32_t;
 
 
 struct Image {
